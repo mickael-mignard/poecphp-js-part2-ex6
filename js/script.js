@@ -1,20 +1,16 @@
+// Get all the images
 let images = document.querySelectorAll('img');
 
 /**
- * Change image when mouse enters 
+ * Change each image by another one when mouse over 
  */
- images.forEach(elt => {
-   elt.addEventListener('mouseover', function () {
-     elt.src = 'images/' + elt.getAttribute('id')+'_2.jpg';
-   });
- });
+images.forEach(image => {
+  image.addEventListener('mouseover', () => image.src = 'images/' + image.id + '_2.jpg');
+});
 
- /**
- * Change image when mouse leaves 
+/**
+ * Change each image by another one when mouse out 
  */
-  images.forEach(elt => {
-    elt.addEventListener('mouseleave', function () {
-      elt.src = 'images/' + elt.getAttribute('id') + '.jpg';
-    });
-  });
-
+ images.forEach(image => {
+  image.addEventListener('mouseout', () => image.src = 'images/' + image.id + '.jpg');
+});
